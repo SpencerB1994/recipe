@@ -67,7 +67,6 @@ ol li {
 }
 .streetTacosNav {
     background-color: #F2F2F2;
-    display: flex;
     order: -1;
 }
 header {
