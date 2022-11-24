@@ -71,6 +71,7 @@ ol li {
 }
 header {
     background-color: white;
+    padding: 5px;
 }
 
 @media screen and (min-width: 500px) {
@@ -113,6 +114,9 @@ header {
     ul#social li {
         font-size: 20px;
     }
+    ul#main-navigation {
+        padding-left: 0px;
+    }
     body img {
         width: 100%;
     }
@@ -141,7 +145,11 @@ header {
     }
     #search {
         display: flex;
-        height: 50px;
+        margin-top: 10px;
+        height: 30px;
+    }
+    #search svg {
+        margin-top: 8px;
     }
     aside {
         display: inline-block;
