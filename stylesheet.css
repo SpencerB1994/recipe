@@ -74,13 +74,17 @@ ol li {
     padding-top: 5px;
     padding-bottom: 5px;
 }
+/* Star Rating */
+/*.star-rating {
+
+}*/
 
 @media screen and (min-width: 500px) {
     html {
         margin: 0 auto;
     }
     body {
-        width: 350px;
+        width: 414px;
         margin: 0 auto;
         display: grid;
         grid-template-columns: 1fr;
@@ -296,6 +300,25 @@ ol li {
         border: 2px solid #EB5428;
         flex: 1;
     }
+
+    /* Side Dishes Styling */
+    aside {
+        padding: 0px;
+        margin: 0px;
+    }
+    aside figure {
+        display: flex;
+    }
+    aside figure img {
+        order: -1;
+        width: 75px;
+        height: 75px;
+    }
+    aside figure h3, aside figure figcaption, aside figure span {
+        display: flex;
+        flex-direction: column;
+    }
+
     /* Socials List*/
     ul#social {
         list-style-type: none;
@@ -319,19 +342,22 @@ ol li {
         display: block;
         font-size: 20px;
     }
-    ul#social li svg {
-
-    }
     footer {
         padding: 10px;
         background-color: white;
         text-align: center;
         font-size: 20px;
         font-family: 'Bebas Neue', Arial, sans-serif;
-        line-height: .75em;
+        line-height: .9em;
     }
     footer h3 {
         padding-top: 10px;
+    }
+    footer img {
+        width: 200px;
+        display: block;
+        margin: 0 auto;
+        padding-bottom: 20px;
     }
     footer > svg {
         display: none;
