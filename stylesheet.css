@@ -106,7 +106,7 @@ header {
     .streetTacosNav {
         order: 2;
     }
-    .main-navigation {
+    .menu {
         display: flex;
         order: -1;
         padding: 0px;
@@ -114,7 +114,7 @@ header {
     ul#social li {
         font-size: 20px;
     }
-    ul#main-navigation {
+    ul#menu {
         padding-left: 0px;
     }
     body img {
@@ -142,6 +142,9 @@ header {
     }
     header nav h2 {
         display: none;
+    }
+    header nav {
+
     }
     #search {
         display: flex;
