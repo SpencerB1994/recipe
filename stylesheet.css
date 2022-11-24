@@ -24,10 +24,6 @@ header {
     display: flex;
     box-shadow: 0px 5px 2px rgba(148, 148, 148, 0.5);
 }
-header section {
-    display: flex;
-    order: 1;
-}
 p {
     font-family: 'Montserrat', Arial, sans-serif;
     padding: 10px;
@@ -104,32 +100,138 @@ ol li {
 
     /* Main Navigation */
     menu {
-        display: flex;
-        order: -1;
         padding: 0px;
     }
     menu#social li {
         font-size: 20px;
     }
+    menu li {
+        list-style-type: none;
+        text-align: center;
+        text-transform: uppercase;
+        font-family: 'Bebas Neue', Arial, sans-serif;
+    }
+    menu li a {
+        text-decoration: none;
+        color: #EB5428;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    /* Main Navigation */
+    /*label {
+        cursor: pointer;
+        display: inline-block;
+        padding: 28px 20px;
+        position: relative;
+        user-select: none;
+        padding: 20px;
+    }
+    label span {
+        background-color: #EB5428;
+        display: block;
+        height: 2px;
+        position: relative;
+        transition: background-color .2s ease-out;
+        width: 18px;
+    }
+    label span:before, label span:after {
+        background: #EB5428;
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        transition: all .2s ease-out;
+        width: 100%;
+    }
+    label span:before {
+        top: 5px;
+    }
+    label span:after {
+        top: -5px;
+    }*/
+    header input {
+        display: none;
+    }
+    header input:checked ~ ul {
+        max-height: 500px;
+    }
+    header input:checked ~ label span {
+        background: transparent;
+    }
+    header input:checked ~ label span:before {
+        transform: rotate(-45deg);
+    }
+    header input:checked ~ label span:after {
+        transform: rotate(45deg);
+    }
+    header input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps) span:after {
+        top: 0;
+    }
+    /* Hamburger SVG */
+    .menu-open-button {
+        display: grid;
+        grid-column: 1 / 1;
+        padding: 20px;
+        margin-right: 0px;
+        overflow: hidden;
+        float: left;
+    }
+    .menu-open-button svg {
+        display: flex;
+    }
+
+    /* first list item and SVG */
+    li#home-icon {
+        display: block;
+    }
+    li svg.icon-tabler-tools-kitchen {
+        margin-left: 40px;
+        margin-right: 20px;
+        z-index: 1;
+        margin-top: 20px;
+    }
+    header menu li:first-child {
+        background-color: #EB5428;
+        display:grid;
+        grid-template-columns: 2 / 2;
+    }
     
+    header menu li .icon-tabler-tools-kitchen:nth-child(1) {
+        padding: 0px;
+        display: grid;
+        grid-column: 2 / 2;
+        position: relative;
+    }
+    header menu li:nth-child(n+2) {
+        text-align: center;
+        grid-column: 1 / 1;
+    }
+
+    li#last {
+        background-color: #EB5428;
+        grid-column: 3 / 3;
+    }
+    svg.icon-tabler-user-circle {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    li#last a {
+        color: white;
+        display: block;
+    }
     body img {
         width: 100%;
     }
-    header {
-        display: flex;
-        order: -1;
-    }
-    header nav h2 {
+    body header menu h2 {
         display: none;
     }
-    header {
+    body header {
         background-color: white;
         padding: 5px;
         display: grid;
-        grid-template-columns: 50px 1fr 1fr;
-    }
-    header svg {
-        grid-column: 1 / 1;
+        grid-template-columns: 90px 160px 90px;
+        order: -1;
     }
 
     /* Details */
@@ -169,19 +271,6 @@ ol li {
         order: -1;
         flex: 1;
     }
-
-    /*
-        align-items: center;
-        justify-content: center;
-        padding: 10px 0px;*/
-    /*
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        flex-wrap: nowrap;
-        order: -1;
-    */
-
     #search svg {
         background-color: #EB5428;
         padding: 0px 5px 1px 5px;
