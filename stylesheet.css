@@ -167,6 +167,7 @@ ol li {
     label span:after {
         top: -5px;
     }*/
+
     header input {
         display: none;
     }
@@ -209,8 +210,8 @@ ol li {
     }
 
     /* first list item and SVG */
-    #home-icon {
-        
+    li#home-icon {
+        background-color: #EB5428;
     }
     /*li#home-icon {
         display: block;
