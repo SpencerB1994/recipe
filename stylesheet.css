@@ -46,7 +46,7 @@ p {
 dd, li, nav, input {
     font-family: 'Montserrat', Arial, sans-serif;
 }
-.streetTacosNav a:hover, menu li a:hover {
+.streetTacosNav a:hover {
     background-color: #EB5428;
     color: white;
     transition: all 0.3s ease-in-out;
@@ -54,11 +54,17 @@ dd, li, nav, input {
 menu {
     margin: 10px;
     padding-left: 20px;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 menu li {
     padding-top: 5px;
     padding-bottom: 5px;
     list-style-type: square;
+    transition: all 0.5s ease-in-out;
+    padding: 5px;
+}
+menu li a:hover, menu li img:hover {
+    color: white;
 }
 figure figcaption {
     font-size: 20px;
