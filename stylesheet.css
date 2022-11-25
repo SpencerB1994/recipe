@@ -224,32 +224,6 @@ ol li {
     li#home-icon a {
         color: white;
     }
-
-    /*li#home-icon {
-        display: block;
-    }
-    li svg.icon-tabler-tools-kitchen {
-        margin-left: 40px;
-        margin-right: 20px;
-        z-index: 1;
-        margin-top: 20px;
-    }
-    header menu li:first-child {
-        background-color: #EB5428;
-        display:grid;
-        grid-template-columns: 2 / 2;
-    }
-    header menu li .icon-tabler-tools-kitchen:nth-child(1) {
-        padding: 0px;
-        display: grid;
-        grid-column: 2 / 2;
-        position: relative;
-    }
-    header menu li:nth-child(n+2) {
-        text-align: center;
-        grid-column: 1 / 1;
-    }*/
-
     li#last {
         background-color: #EB5428;
         grid-column: 3 / 3;
@@ -319,7 +293,7 @@ ol li {
 
     /* Side Dishes Styling */
     aside {
-        padding: 0px;
+        padding: 10px;
         margin: 0px;
         display: flex;
         flex-direction: column;
