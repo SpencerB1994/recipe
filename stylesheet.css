@@ -134,47 +134,30 @@ ol li {
         font-family: 'Bebas Neue', Arial, sans-serif;
         padding: 10px;
     }
-    menu li:hover {
+    menu li a {
         text-decoration: none;
         color: #EB5428;
         font-size: 20px;
         text-align: center;
     }
+
     
 
     /* Main Navigation */
-    /*label {
+    header label {
         cursor: pointer;
         display: inline-block;
         padding: 28px 20px;
         position: relative;
         user-select: none;
         padding: 20px;
-    }
-    label span {
-        background-color: #EB5428;
-        display: block;
-        height: 2px;
-        position: relative;
-        transition: background-color .2s ease-out;
-        width: 18px;
-    }
-    label span:before, label span:after {
-        background: #EB5428;
-        content: '';
-        display: block;
-        height: 100%;
-        position: absolute;
-        transition: all .2s ease-out;
-        width: 100%;
-    }
-    label span:before {
+    }    
+    header label span:before {
         top: 5px;
     }
-    label span:after {
+    header label span:after {
         top: -5px;
-    }*/
-
+    }
     header input {
         display: none;
     }
@@ -193,55 +176,6 @@ ol li {
     header input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps) span:after {
         top: 0;
     }
-    menu {
-        overflow: visible;
-        position: absolute;
-        top: 0;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    }
-    menu li, menu a {
-        grid-column: 2 / 2;
-    }
-    header label span, header input {
-        display: none;
-    }
-    /* Hamburger SVG */
-    .menu-open-button {
-        display: grid;
-        grid-column: 1 / 1;
-        padding: 20px;
-        margin-right: 0px;
-        overflow: hidden;
-        float: left;
-    }
-    .menu-open-button svg {
-        display: flex;
-    }
-
-    /* first list item and SVG */
-    li#home-icon {
-        background-color: #EB5428;
-        position: absolute;
-        grid-column: 2 / 2;
-    }
-    li#home-icon a {
-        color: white;
-    }
-    li#last {
-        grid-column: 3 / 3;
-        position: absolute;
-    }
-    li#last a {
-        color: black;
-        display: block;
-        grid-column: 3 / 3;
-    }
-    svg.icon-tabler-user-circle {
-        padding-left: 20px;
-        padding-right: 20px;
-        filter: invert(31%) sepia(92%) saturate(5500%) hue-rotate(351deg) brightness(103%) contrast(84%);
-    }
 
     /* Main Image */
     body img {
@@ -258,6 +192,54 @@ ol li {
         display: grid;
         grid-template-columns: 100px 200px 100px;
         order: -1;
+    }
+    menu {
+        overflow: visible;
+        position:relative;
+        top: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+    menu li, menu a {
+        grid-column: 2 / 2;
+    }
+    header label span, header input {
+        position: flex;
+    }
+    /* header menu - Hamburger SVG */
+    .menu-open-button {
+        display: flex;
+        position: relative;
+        top: -10px;
+        left: 0px;
+    }
+
+    /* header menu - first list item and SVG */
+    li#home-icon {
+        background-color: #EB5428;
+        position: absolute;
+        grid-column: 2 / 3;
+    }
+    li#home-icon a {
+        color: white;
+    }
+
+    /* header menu - last list item and svg */
+    li#last {
+        position: absolute;
+        grid-column: 3 / 4;
+        top: 0px;
+        left: 0px;
+    }
+    li#last a {
+        color: black;
+        display: block;
+        grid-column: 3 / 4;
+    }
+    svg.icon-tabler-user-circle {
+        padding-left: 20px;
+        padding-right: 20px;
+        filter: invert(31%) sepia(92%) saturate(5500%) hue-rotate(351deg) brightness(103%) contrast(84%);
     }
 
     /* Details */
