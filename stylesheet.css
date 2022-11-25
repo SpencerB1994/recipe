@@ -305,18 +305,40 @@ ol li {
     aside {
         padding: 0px;
         margin: 0px;
+        display: flex;
+        flex-direction: column;
     }
     aside figure {
         display: flex;
+        margin: 10px;
     }
     aside figure img {
         order: -1;
-        width: 75px;
-        height: 75px;
+        width: 100px;
+        height: 100px;
+        float: left;
     }
-    aside figure h3, aside figure figcaption, aside figure span {
+    aside figure h3 {
+        margin: 0px;
+    }
+    aside figure figcaption {
+        order: 2;
+    }
+    aside figure p {
+        order: 3;
+        margin: 0px;
+        padding-top: 10px;
+        padding-right: 0px;
+        padding-left: 0px;
+        padding-bottom: 0px;
+    }
+    aside figure span {
+        order: 4;
+        width: 100px;
+    }
+    aside figure h3, aside figure figcaption, aside figure p, aside figure span {
         display: flex;
-        flex-direction: column;
+        float: right;
     }
 
     /* Socials List*/
