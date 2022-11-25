@@ -80,36 +80,16 @@ ol li {
     padding-bottom: 5px;
 }
 /* Star Rating */
-.rating {
-    display: block;
-  }
-.rating input [type=radio] + label {
-    background: url(https://upload.wikimedia.org/wikipedia/commons/f/f9/Five_Pointed_Star_Solid.svg);
+.rating [type="radio"] {
+    display: inline;
+    width: 20px;
+    height: 20px;
+    margin-top: 0px;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
 }
 .rating input:checked {
     accent-color: #EB5428;
 }
-  
-/*.rating input {
-    position: absolute;
-    left: -100vw;
-}
-.rating label {
-    width: 48px;
-    height: 48px;
-    padding: 48px 0 0;
-    overflow: hidden;
-    background: url('stars.svg') no-repeat top left;
-}
-.star-rating:not(:hover) input:indeterminate + label,
-.star-rating:not(:hover) input:checked ~ input + label,
-.star-rating input:hover ~ input + label {
-  background-position : -48px 0;
-}
-
-.rating:not(:hover) input:focus-visible + label{
-  background-position : -96px 0;
-}*/
 
 @media screen and (min-width: 500px) {
     html {
