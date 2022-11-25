@@ -316,7 +316,6 @@ ol li {
         order: -1;
         width: 100px;
         height: 100px;
-        float: left;
     }
     aside figure h3 {
         margin: 0px;
@@ -338,7 +337,6 @@ ol li {
     }
     aside figure h3, aside figure figcaption, aside figure p, aside figure span {
         display: flex;
-        float: right;
     }
 
     /* Socials List*/
