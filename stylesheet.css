@@ -236,6 +236,10 @@ ol li {
         display: block;
         grid-column: 3 / 4;
     }
+    li#last a:hover {
+        color: white;
+        transition: all 0.3s ease-in-out;
+    }
     svg.icon-tabler-user-circle {
         padding-left: 20px;
         padding-right: 20px;
