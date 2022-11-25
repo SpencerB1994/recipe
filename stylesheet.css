@@ -123,6 +123,9 @@ ol li {
     /* Main Navigation */
     menu {
         padding: 0px;
+        overflow: hidden;
+        max-height: 0px;
+        transition: max-height .2s ease-out;
     }
     menu#social li {
         font-size: 20px;
@@ -132,7 +135,8 @@ ol li {
         text-align: center;
         text-transform: uppercase;
         font-family: 'Bebas Neue', Arial, sans-serif;
-        padding: 10px;
+        position: relative;
+        display: flex;
     }
     menu li:hover {
         background-color: #EB5428;
@@ -153,7 +157,6 @@ ol li {
         position: absolute;
         user-select: none;
         padding: 20px;
-        height: 32px;
     }    
     header label span:before {
         top: 5px;
@@ -191,7 +194,6 @@ ol li {
     }
     body header {
         background-color: white;
-        padding: 5px;
         display: grid;
         grid-template-columns: 100px 200px 100px;
         order: -1;
@@ -205,6 +207,10 @@ ol li {
     }
     menu li, menu a {
         grid-column: 2 / 2;
+        background-color: transparent;
+    }
+    menu li:not(:last-child), menu li:not(:first-child) {
+        flex-direction: column;
     }
     header label span, header input {
         position: flex;
@@ -213,26 +219,26 @@ ol li {
     .menu-open-button {
         display: flex;
         position: relative;
-        top: -10px;
-        left: 0px;
     }
 
     /* header menu - first list item and SVG */
     li#home-icon {
         background-color: #EB5428;
-        position:relative;
-        grid-column: 2 / 3;
-        margin-top: -20px;
+        position: relative;
+        flex-grow: 4;
+        padding-bottom: 12px;
+        padding-top: 10px;
+        margin-top: -14px;
     }
     li#home-icon a {
-        color: white;
+        background-color: transparent;
     }
 
     /* header menu - last list item and svg */
     li#last {
         position: absolute;
         grid-column: 3 / 4;
-        top: -20px;
+        top: -18px;
         left: 20px;
     }
     li#last a {
@@ -242,11 +248,13 @@ ol li {
     }
     li#last a:hover {
         color: white;
+        background-color: transparent;
         transition: all 0.3s ease-in-out;
     }
     svg.icon-tabler-user-circle {
         padding-left: 20px;
         padding-right: 20px;
+        padding-top: 10px;
         filter: invert(31%) sepia(92%) saturate(5500%) hue-rotate(351deg) brightness(103%) contrast(84%);
     }
 
