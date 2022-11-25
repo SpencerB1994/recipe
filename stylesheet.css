@@ -209,7 +209,10 @@ ol li {
     }
 
     /* first list item and SVG */
-    li#home-icon {
+    #home-icon {
+        
+    }
+    /*li#home-icon {
         display: block;
     }
     li svg.icon-tabler-tools-kitchen {
@@ -223,7 +226,6 @@ ol li {
         display:grid;
         grid-template-columns: 2 / 2;
     }
-    
     header menu li .icon-tabler-tools-kitchen:nth-child(1) {
         padding: 0px;
         display: grid;
@@ -233,7 +235,7 @@ ol li {
     header menu li:nth-child(n+2) {
         text-align: center;
         grid-column: 1 / 1;
-    }
+    }*/
 
     li#last {
         background-color: #EB5428;
@@ -309,34 +311,49 @@ ol li {
         flex-direction: column;
     }
     aside figure {
-        display: flex;
-        margin: 10px;
+        display: grid;
+        grid-template-columns: 100px 1fr;
+        margin-top: 20px;
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-bottom: 20px;
     }
     aside figure img {
-        order: -1;
-        width: 100px;
-        height: 100px;
+        grid-row: 1 / 1;
     }
     aside figure h3 {
-        margin: 0px;
+        grid-column: 2 / 2;
+        grid-row: 1 / 1;
+        margin-left: 20px;
     }
     aside figure figcaption {
-        order: 2;
+        grid-row: 1 / 1;
+        grid-column: 2 / 2;
+        margin: 0px;
+        margin-left: 20px;
+        margin-top: 30px;
+        font-family: 'Montserrat', Arial, sans-serif;
+        font-size: 16px;
     }
     aside figure p {
-        order: 3;
-        margin: 0px;
-        padding-top: 10px;
+        grid-column: 2 / 2;
+        grid-row: 1 / 1;
         padding-right: 0px;
         padding-left: 0px;
+        padding-top: 60px;
         padding-bottom: 0px;
+        margin-left: 20px;
+        font-weight: bold;
     }
     aside figure span {
-        order: 4;
-        width: 100px;
+        grid-column: 2 / 2;
+        grid-row: 1 / 1;
+        margin-left: 20px;
+        margin-top: 85px;
+        padding: 0px;
     }
-    aside figure h3, aside figure figcaption, aside figure p, aside figure span {
-        display: flex;
+    aside figure span input {
+        height: 15px;
     }
 
     /* Socials List*/
