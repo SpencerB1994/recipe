@@ -213,6 +213,9 @@ ol li {
     li#home-icon {
         background-color: #EB5428;
     }
+    li#home-icon a {
+        color: white;
+    }
     /*li#home-icon {
         display: block;
     }
