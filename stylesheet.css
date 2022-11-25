@@ -132,13 +132,15 @@ ol li {
         text-align: center;
         text-transform: uppercase;
         font-family: 'Bebas Neue', Arial, sans-serif;
+        padding: 10px;
     }
-    menu li a {
+    menu li:hover {
         text-decoration: none;
         color: #EB5428;
         font-size: 20px;
         text-align: center;
     }
+    
 
     /* Main Navigation */
     /*label {
@@ -220,26 +222,33 @@ ol li {
     /* first list item and SVG */
     li#home-icon {
         background-color: #EB5428;
+        position: absolute;
+        grid-column: 2 / 2;
     }
     li#home-icon a {
         color: white;
     }
     li#last {
-        background-color: #EB5428;
+        grid-column: 3 / 3;
+        position: absolute;
+    }
+    li#last a {
+        color: black;
+        display: block;
         grid-column: 3 / 3;
     }
     svg.icon-tabler-user-circle {
         padding-left: 20px;
         padding-right: 20px;
+        filter: invert(31%) sepia(92%) saturate(5500%) hue-rotate(351deg) brightness(103%) contrast(84%);
     }
-    li#last a {
-        color: white;
-        display: block;
-        grid-column: 3 / 3;
-    }
+
+    /* Main Image */
     body img {
         width: 100%;
     }
+
+    /* header menu */
     body header menu h2 {
         display: none;
     }
