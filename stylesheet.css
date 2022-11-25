@@ -137,6 +137,9 @@ ol li {
         display: flex;
         padding: 0px 10px;
     }
+    .streetTacosNav nav ul li a:hover {
+        background-color: #EB5428;
+    }
     .streetTacosNav nav ul li {
         list-style-type: none;
         text-align: center;
@@ -404,6 +407,12 @@ ol li {
         color: #EB5428;
         display: block;
         font-size: 20px;
+        padding: 5px;
+    }
+    ul#social li a:hover {
+        background-color: #EB5428;
+        color: white;
+        transition: all 0.5s ease-in-out;
     }
     footer {
         padding: 10px;
