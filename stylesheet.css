@@ -46,6 +46,11 @@ p {
 dd, li, nav, input {
     font-family: 'Montserrat', Arial, sans-serif;
 }
+.streetTacosNav a:hover, menu li a:hover {
+    background-color: #EB5428;
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
 menu {
     margin: 10px;
     padding-left: 20px;
@@ -193,6 +198,9 @@ ol li {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     }
+    menu li, menu a {
+        grid-column: 2 / 2;
+    }
     header label span, header input {
         display: none;
     }
@@ -216,7 +224,7 @@ ol li {
     li#home-icon a {
         color: white;
     }
-    
+
     /*li#home-icon {
         display: block;
     }
@@ -253,6 +261,7 @@ ol li {
     li#last a {
         color: white;
         display: block;
+        grid-column: 3 / 3;
     }
     body img {
         width: 100%;
@@ -264,7 +273,7 @@ ol li {
         background-color: white;
         padding: 5px;
         display: grid;
-        grid-template-columns: 90px 160px 90px;
+        grid-template-columns: 100px 200px 100px;
         order: -1;
     }
 
