@@ -1,4 +1,5 @@
 html {
+    margin: 0 auto;
     background-color: rgba(122, 191, 191, 0.5);
 }
 body {
@@ -21,7 +22,6 @@ h3 {
     margin: 0 auto;
 }
 header {
-    display: flex;
     box-shadow: 0px 5px 2px rgba(148, 148, 148, 0.5);
 }
 menu {
@@ -60,8 +60,9 @@ menu li {
     padding-top: 5px;
     padding-bottom: 5px;
     list-style-type: square;
-    transition: all 0.5s ease-in-out;
     padding: 5px;
+    display: grid;
+    grid-template-columns: 50px;
 }
 menu li a:hover, menu li img:hover {
     color: white;
@@ -208,8 +209,13 @@ ol li {
     body header {
         background-color: white;
         display: grid;
-        grid-template-columns: 100px 200px 100px;
+        grid-template-columns: 80px 255px 80px;
+        position: absolute;
         order: -1;
+    }
+    header menu {
+        max height: 0;
+        transition: max-height .2s ease-out;
     }
     menu {
         overflow: visible;
@@ -222,16 +228,35 @@ ol li {
         grid-column: 2 / 2;
         background-color: transparent;
     }
+    .menu-items {
+        display: inline;
+    }
     menu li:not(:last-child), menu li:not(:first-child) {
         flex-direction: column;
     }
     header label span, header input {
         position: flex;
     }
+
     /* header menu - Hamburger SVG */
-    .menu-open-button {
-        display: flex;
+    .menu-icon {
+        display: block;
         position: relative;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        text-align: center;
+    }
+    .menu-icon a {
+        text-transform: uppercase;
+        font-family: 'Bebas Neue', Arial, sans-serif;
+        text-decoration: none;
+        font-size: 20px;
+        color: black;
+    }
+    .menu-open-button a:hover {
+        color: #EB5428;
     }
 
     /* header menu - first list item and SVG */
@@ -239,12 +264,15 @@ ol li {
         background-color: #EB5428;
         position: relative;
         flex-grow: 4;
-        padding-bottom: 12px;
+        padding-bottom: 8px;
         padding-top: 10px;
+        padding-left: 40px;
+        padding-right: 40px;
         margin-top: -14px;
     }
     li#home-icon a {
         background-color: transparent;
+        display: block;
     }
 
     /* header menu - last list item and svg */
@@ -252,11 +280,11 @@ ol li {
         position: absolute;
         grid-column: 3 / 4;
         top: -18px;
-        left: 20px;
     }
     li#last a {
+        display: block;
         color: black;
-        display: fixed;
+        display: block;
         grid-column: 3 / 4;
     }
     li#last a:hover {
@@ -291,10 +319,12 @@ ol li {
 
     /* Search Bar and SVG */
     section#search {
+        position: relative;
         padding-left: 40px;
         padding-right: 40px;
         padding-top: 40px;
         padding-bottom: 20px;
+        margin-top: 80px;
     }
     #search {
         display: flex;
@@ -423,18 +453,62 @@ ol li {
 }
 
 @media screen and (min-width: 900px) {
-    html {
+    body {
+        width: 768px;
         margin: 0 auto;
     }
-    body {
-        width: 800px;
-        margin: 0 auto;
+    h1 {
+        text-align: left;
+        padding: 20px;
+    }
+    body header {
+        background-color: white;
+        display: grid;
+        grid-template-columns: 80px 600px 80px;
+        order: -1;
+    }
+    li#home-icon {
+        order: -1;
+    }
+    a {
+        font-family: 'Bebas Neue', Arial, sans-serif;
+    }
+
+    /* Street Taco Nav */
+    .streetTacosNav ul {
+        position: relative;
+        display: flex;
+        width: 748px;
+        justify-content: space-around;
+        background-color: rgba(255, 255, 255, 0.7);
+        padding: 10px;
+        margin: 0;
+    }
+
+    /* Search Bar */
+    section#search {
+        padding: 20px;
+        order: -1;
+    }
+    #search {
+        display: flex;
+        order: -1;
+        flex: 1;
+    }
+    #search svg {
+        background-color: #EB5428;
+        padding: 0px 5px 1px 5px;
+    }
+    input {
+        height: 35px;
+        border: 2px solid #EB5428;
+        flex: 1;
     }
 }
 
 @media screen and (min-width: 1400px) {
     body {
-        width: 1400px;
+        width: 1280px;
         margin: 0 auto;
     }
 }
