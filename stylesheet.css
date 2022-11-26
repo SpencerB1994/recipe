@@ -61,7 +61,6 @@ menu li {
     padding-bottom: 5px;
     list-style-type: square;
     padding: 5px;
-    display: grid;
     grid-template-columns: 50px;
 }
 menu li a:hover, menu li img:hover {
@@ -149,8 +148,6 @@ ol li {
         text-align: center;
         text-transform: uppercase;
         font-family: 'Bebas Neue', Arial, sans-serif;
-        position: relative;
-        display: flex;
     }
     menu li:hover {
         background-color: #EB5428;
@@ -164,44 +161,15 @@ ol li {
     }    
 
     /* Main Navigation */
-    header label {
-        cursor: pointer;
-        display: inline-block;
-        padding: 28px 20px;
-        position: absolute;
-        user-select: none;
-        padding: 20px;
-    }    
-    header label span:before {
-        top: 5px;
-    }
-    header label span:after {
-        top: -5px;
-    }
-    header input {
-        display: none;
-    }
-    header input:checked ~ ul {
-        max-height: 500px;
-    }
-    header input:checked ~ label span {
-        background: transparent;
-    }
-    header input:checked ~ label span:before {
-        /*transform: rotate(-45deg);*/
-    }
-    header input:checked ~ label span:after {
-        transform: rotate(45deg);
-    }
     header .menu-btn {
         display: none;
     }
     header .menu-btn:checked ~ menu {
-        max-height: 700px;   
+        max-height: 700px;
     }
-    header input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps) span:after {
+    /*header input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps) span:after {
         top: 0;
-    }
+    }*/
 
     /* Main Image */
     body img {
@@ -209,14 +177,11 @@ ol li {
     }
 
     /* header menu */
-    body header menu h2 {
-        display: none;
-    }
     body header {
         background-color: white;
         display: grid;
         grid-template-columns: 80px 255px 80px;
-        position: absolute;
+        position: fixed;
         order: -1;
     }
     header menu {
@@ -232,10 +197,6 @@ ol li {
     }
     menu li, menu a {
         grid-column: 2 / 2;
-        background-color: transparent;
-    }
-    .menu-btn .menu-items {
-        display: inline;
     }
     menu li:not(:last-child), menu li:not(:first-child) {
         flex-direction: column;
@@ -261,9 +222,6 @@ ol li {
         font-size: 20px;
         color: black;
     }
-    .menu-open-button a:hover {
-        color: #EB5428;
-    }
 
     /* header menu - first list item and SVG */
     li#home-icon {
@@ -283,19 +241,18 @@ ol li {
 
     /* header menu - last list item and svg */
     li#last {
+        display: block;
         position: absolute;
         grid-column: 3 / 4;
-        top: -18px;
+        margin-top: -22px;
     }
     li#last a {
-        display: block;
         color: black;
         display: block;
         grid-column: 3 / 4;
     }
     li#last a:hover {
         color: white;
-        background-color: transparent;
         transition: all 0.3s ease-in-out;
     }
     svg.icon-tabler-user-circle {
@@ -325,7 +282,6 @@ ol li {
 
     /* Search Bar and SVG */
     section#search {
-        position: relative;
         padding-left: 40px;
         padding-right: 40px;
         padding-top: 40px;
