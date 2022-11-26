@@ -61,7 +61,6 @@ menu li {
     padding-bottom: 5px;
     list-style-type: square;
     padding: 5px;
-    grid-template-columns: 50px;
 }
 menu li a:hover, menu li img:hover {
     color: white;
@@ -170,6 +169,9 @@ ol li {
     /*header input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps) span:after {
         top: 0;
     }*/
+    header menu li ~ li:not(:first-child or :last-child) {
+
+    }
 
     /* Main Image */
     body img {
@@ -181,7 +183,7 @@ ol li {
         background-color: white;
         display: grid;
         grid-template-columns: 80px 255px 80px;
-        position: fixed;
+        position: absolute;
         order: -1;
     }
     header menu {
@@ -197,9 +199,6 @@ ol li {
     }
     menu li, menu a {
         grid-column: 2 / 2;
-    }
-    menu li:not(:last-child), menu li:not(:first-child) {
-        flex-direction: column;
     }
     header label span, header input {
         position: flex;
