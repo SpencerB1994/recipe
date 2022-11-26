@@ -24,11 +24,6 @@ h3 {
 header {
     box-shadow: 0px 5px 2px rgba(148, 148, 148, 0.5);
 }
-menu {
-    overflow: hidden;
-    max-height: 0;
-    transition: max-height .2s ease-out;
-}
 header label {
     cursor: pointer;
     display: inline-block;
@@ -52,9 +47,9 @@ dd, li, nav, input {
     transition: all 0.3s ease-in-out;
 }
 menu {
-    margin: 10px;
-    padding-left: 20px;
-    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height .2s ease-out;
 }
 menu li {
     padding-top: 5px;
@@ -141,12 +136,14 @@ ol li {
         overflow: hidden;
         max-height: 0px;
         transition: max-height .2s ease-out;
+        overflow: scroll; /* added scroll feature for now so I can adjust styling of line items*/
     }
     menu li {
         list-style-type: none;
         text-align: center;
         text-transform: uppercase;
         font-family: 'Bebas Neue', Arial, sans-serif;
+        display: flex;
     }
     menu li:hover {
         background-color: #EB5428;
@@ -157,57 +154,12 @@ ol li {
         color: #EB5428;
         font-size: 20px;
         text-align: center;
-    }    
-
-    /* Main Navigation */
-    header .menu-btn {
-        display: none;
     }
-    header .menu-btn:checked ~ menu {
-        max-height: 700px;
-    }
-    /*header input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps) span:after {
-        top: 0;
-    }*/
-    header menu li ~ li:not(:first-child or :last-child) {
-
-    }
-
-    /* Main Image */
-    body img {
-        width: 100%;
-    }
-
-    /* header menu */
-    body header {
-        background-color: white;
-        display: grid;
-        grid-template-columns: 80px 255px 80px;
-        position: absolute;
-        order: -1;
-    }
-    header menu {
-        max height: 0;
-        transition: max-height .2s ease-out;
-    }
-    menu {
-        overflow: visible;
-        position: relative;
-        top: 0;
-        display: grid;
-        grid-template-columns: 1fr;
-    }
-    menu li, menu a {
-        grid-column: 2 / 2;
-    }
-    header label span, header input {
-        position: flex;
-    }
-
     /* header menu - Hamburger SVG */
     .menu-icon {
         display: block;
         position: relative;
+        float: left;
         padding-left: 20px;
         padding-right: 20px;
         padding-top: 5px;
@@ -215,50 +167,72 @@ ol li {
         text-align: center;
     }
     .menu-icon a {
+        display: block;
         text-transform: uppercase;
         font-family: 'Bebas Neue', Arial, sans-serif;
         text-decoration: none;
         font-size: 20px;
         color: black;
     }
-
     /* header menu - first list item and SVG */
-    li#home-icon {
+    .home-icon {
         background-color: #EB5428;
-        position: relative;
-        flex-grow: 4;
-        padding-bottom: 8px;
+        position: absolute;
+        padding-bottom: 6px;
         padding-top: 10px;
-        padding-left: 40px;
-        padding-right: 40px;
-        margin-top: -14px;
-    }
-    li#home-icon a {
-        background-color: transparent;
-        display: block;
+        padding-left: 92px;
+        padding-right: 92px;
     }
 
     /* header menu - last list item and svg */
-    li#last {
-        display: block;
-        position: absolute;
-        grid-column: 3 / 4;
-        margin-top: -22px;
+    .user-icon {
+        float: right;
+        margin-top: -30px;
+        position: relative;
     }
-    li#last a {
+    .user-icon a {
         color: black;
+        transition: background-color 1s ease-in-out, color 1s ease-in-out, filter 1s ease-in-out;
+        font-family: 'Bebas Neue', Arial, sans-serif;
+        text-decoration: none;
+        font-size: 20px;
         display: block;
-        grid-column: 3 / 4;
+        padding-bottom: 8px;
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 6px;
+        margin-top: -2px;
+        text-align: center;
     }
-    li#last a:hover {
+    .user-icon a:hover {
+        background-color: #EB5428;
         color: white;
         transition: all 0.3s ease-in-out;
     }
-    svg.icon-tabler-user-circle {
-        padding-left: 20px;
-        padding-right: 20px;
-        padding-top: 10px;
+    svg.icon.icon-tabler.icon-tabler-user-circle {
         filter: invert(31%) sepia(92%) saturate(5500%) hue-rotate(351deg) brightness(103%) contrast(84%);
+        display: block;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .user-icon a ~ svg:hover {
+        filter: none;
+        transition: 0.3s ease-in-out;
+    }
+    header .menu-btn {
+        display: none;
+    }
+    header .menu-btn:checked ~ menu {
+        max-height: 700px;
+    }
+    header {
+        background-color: white;
+        order: -1;
+    }
+
+    /* Main Image */
+    body img {
+        width: 100%;
     }
 
     /* Details */
@@ -285,7 +259,6 @@ ol li {
         padding-right: 40px;
         padding-top: 40px;
         padding-bottom: 20px;
-        margin-top: 80px;
     }
     #search {
         display: flex;
