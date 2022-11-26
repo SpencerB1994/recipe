@@ -188,10 +188,16 @@ ol li {
         background: transparent;
     }
     header input:checked ~ label span:before {
-        transform: rotate(-45deg);
+        /*transform: rotate(-45deg);*/
     }
     header input:checked ~ label span:after {
         transform: rotate(45deg);
+    }
+    header .menu-btn {
+        display: none;
+    }
+    header .menu-btn:checked ~ menu {
+        max-height: 700px;   
     }
     header input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps) span:after {
         top: 0;
@@ -228,7 +234,7 @@ ol li {
         grid-column: 2 / 2;
         background-color: transparent;
     }
-    .menu-items {
+    .menu-btn .menu-items {
         display: inline;
     }
     menu li:not(:last-child), menu li:not(:first-child) {
