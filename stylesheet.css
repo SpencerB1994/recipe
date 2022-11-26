@@ -205,7 +205,7 @@ ol li {
     }
     menu li:hover {
         background-color: #EB5428;
-        transition: all 0.3s ease-in-out;
+        transition: all 1s ease-in-out;
     }
     menu li a {
         text-decoration: none;
@@ -249,7 +249,7 @@ ol li {
     }
     .user-icon a {
         color: black;
-        transition: background-color 1s ease-in-out, color 1s ease-in-out, filter 1s ease-in-out;
+        transition: background-color 1s ease-in-out, color 1s ease-in-out;
         font-family: 'Bebas Neue', Arial, sans-serif;
         text-decoration: none;
         font-size: 20px;
@@ -266,13 +266,13 @@ ol li {
         color: white;
         transition: all 0.3s ease-in-out;
     }
-    svg.icon.icon-tabler.icon-tabler-user-circle {
+    a svg.icon.icon-tabler.icon-tabler-user-circle {
         filter: invert(31%) sepia(92%) saturate(5500%) hue-rotate(351deg) brightness(103%) contrast(84%);
         display: block;
         margin-left: 20px;
         margin-right: 20px;
     }
-    .user-icon a ~ svg:hover {
+    .user-icon svg:hover {
         filter: none;
         transition: 0.3s ease-in-out;
     }
