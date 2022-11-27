@@ -54,7 +54,6 @@ menu {
 menu li {
     padding-top: 5px;
     padding-bottom: 5px;
-    list-style-type: square;
     padding: 5px;
 }
 menu li a:hover, menu li img:hover {
@@ -78,6 +77,9 @@ aside h2 {
 ol li {
     padding-top: 5px;
     padding-bottom: 5px;
+}
+ul {
+    list-style-type: square;
 }
 /* Star Rating */
 .rating {
@@ -138,7 +140,7 @@ ol li {
 .star1_rating2, .star2_rating2, .star3_rating2, .star4_rating2, .star5_rating2 {
     fill: #EB5428;
 }
-.star1_rating3, .star2_rating3, .star3_rating3, .star4_rating3, .star5_rating3 {
+.star1_rating3, .star2_rating3, .star3_rating3, .star4_rating3 {
     fill: #EB5428;
 }
 .star1_rating4, .star2_rating4, .star3_rating4, .star4_rating4 {
@@ -456,32 +458,88 @@ ol li {
     }
     body header {
         background-color: white;
+        height: 189px;
+        order: -1;
+    }
+    header input {
+        display: none;
+    }
+
+    /* Main Navigation */
+    menu {
+        padding-left: 0px;
+        margin-top: 61px;
+        width: 768px;
+        position: inherit;
+        overflow: visible;
         display: grid;
-        grid-template-columns: 80px 600px 80px;
+        grid-template-columns: 100px 100px 100px 100px 100px 100px 100px;
+        justify-content: space-between;
+        padding-top: 20px;
+    }
+    menu li {
+        width: 91px;
+    }
+    menu li a img {
+        width: 60px;
+        margin-top: 5px;
+    }
+    .home-icon {
+        background-color: #EB5428;
+        position: absolute;
+        padding: 8px 8px;
         order: -1;
     }
-    li#home-icon {
-        order: -1;
+    header .hamburger-icon, header .menu-icon, header .menu-icon a {
+        display: none;
+    }   
+    header .menu-icon .hamburger-icon:not(:checked) + menu {
+        display: block;
+    }    
+
+    /* Sign in / Up Icon */
+    .user-icon {
+        position: relative;
+        display: block;
+        justify-content: flex-end;
+        margin-top: -95px;
     }
-    a {
-        font-family: 'Bebas Neue', Arial, sans-serif;
+    svg.icon.icon-tabler.icon-tabler-user-circle {
+        filter: invert(31%) sepia(92%) saturate(5500%) hue-rotate(351deg) brightness(103%) contrast(84%);
+        display: block;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    svg.icon.icon-tabler.icon-tabler-user-circle:hover {
+        filter: brightness(1) invert(0);
+        transition: all 1s ease-in-out;
+    }
+    .user-icon svg:hover {
+        filter: none;
+        transition: 0.3s ease-in-out;
     }
 
     /* Street Taco Nav */
     .streetTacosNav ul {
-        position: relative;
+        position: absolute;
         display: flex;
         width: 748px;
         justify-content: space-around;
         background-color: rgba(255, 255, 255, 0.7);
         padding: 10px;
-        margin: 0;
+        margin-top: 0;
     }
 
     /* Search Bar */
     section#search {
         padding: 20px;
         order: -1;
+        position: absolute;
+        display: flex;
+        width: 300px;
+        z-index: 1;
+        margin-left: 350px;
+        height: 40px;
     }
     #search {
         display: flex;
@@ -497,11 +555,233 @@ ol li {
         border: 2px solid #EB5428;
         flex: 1;
     }
+
+    /* Details */
+    dl {
+        display: grid;
+        flex-direction: column;
+        justify-items: center;
+        /*padding: 10px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 100px 1fr;*/
+    }
+    dt {
+        display: block;
+    }
+    dd {
+        display: block;
+        flex-direction: row-reverse;
+        /*text-align: left;
+        margin-left: 0px;
+        padding: 0px;
+        display: inline-flex;*/
+    }
+
+    /* ingredients and directions sections */
+    .container {
+        display: grid;
+        grid-template-columns: 250px 1fr;
+    }
+    .ingredients {
+        float: left;
+        padding: 5px;
+    }
+    .ingredients ul {
+        line-height: 2em;
+    }
+    .directions {
+        float: right;
+        padding: 5px;
+    }
+    .directions ol li {
+        padding-bottom: 22px;
+    }
+    .directions ol li:last-child {
+        padding-bottom: 0px;
+    }
+    .directions ol {
+        line-height: 1.5em;
+    }
+
+    /* aside */
+    aside {
+        display: grid;
+        grid-template: 1fr 1fr 1fr;
+        padding: 0px;
+    }
+    aside h2 {
+        grid-column: 1 / 3;
+    }
+    aside figure p {
+        padding-top: 60px;
+    }
+    
+    /* footer */
+    ul#social {
+        float: right;
+        justify-content: space-between;
+        align-items: stretch;
+    }
+    ul#social li {
+        padding: 20px;
+    }
+    footer img {
+        float: none;
+        padding: 20px 40px;
+    }
+    footer small {
+        display: block;
+        float: left;
+        margin-left: 100px;
+    }
 }
 
 @media screen and (min-width: 1400px) {
     body {
         width: 1280px;
         margin: 0 auto;
+    }
+
+    /* Main Navigation */
+    menu {
+        position: absolute;
+        padding: 0px;
+        margin-top: 0px;
+        margin-left: 250px;
+        justify-content: space-between;
+    }
+    header {
+        display: block;
+        max-height: 108px;
+    }
+    .home-icon {
+        padding: 22px;
+    }
+    .user-icon {
+        margin-top: 0px;
+    }
+    .user-icon a {
+        padding: 22px;
+    }
+
+    /* search bar */
+    section#search {
+        display: flex;
+        width: 300px;
+        float: none;
+        position: inherit;
+        margin: auto;
+        padding: 40px 0px;
+    }
+
+    /* h1 header */
+    h1 {
+        text-align: center;
+        padding: 0px 0px 20px 0px;
+    }
+
+    /* local utilities - street tacos nav */
+    .streetTacosNav nav ul {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        width: 100px;
+        margin: 0px;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 40px;
+        padding-bottom: 253px;
+        background-color: white;
+        border: 2px solid #EB5428;
+    }
+    .streetTacosNav nav ul li a {
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    /* body image and paragraphs */
+    .image-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .image-container .body-image {
+        width: 461px;
+        margin-left: 164px;
+    }
+    .image-container .body-image-text p {
+        line-height: 2em;
+    }
+
+    /* details section */
+    .details {
+        background-color: #0D0D0D;
+        padding: 10px;
+        margin-top: -5px;
+    }
+    .details h3, .details dl, .details dl dt, .details dl dd {
+        color: #7ABFBF;
+    }
+    .details dl {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    /* side dishes */
+    aside {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        padding: 20px;
+    }
+    aside h2 {
+        grid-column: 1 / 5;
+    }
+    aside figure {
+        display: flex;
+        flex-direction: column;
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+    aside figure h3 {
+        margin-top: 10px;
+    }
+    aside figure img {
+        width: 100%;
+        height: 100%;
+        order: -1;
+    }
+    aside figure figcaption {
+        margin-top: 10px;
+    }
+    aside figure p {
+        padding-top: 10px;
+    }
+    aside figure .rating, aside figure .rating2, aside figure .rating3, aside figure .rating4 {
+        margin-top: -20px;
+        padding-bottom: 10px;
+        margin-left: 90px;
+    }
+
+    /* footer */
+    footer img {
+        float: left;
+        padding: 20px 0px;
+    }
+    footer small {
+        float: left;
+        padding-left: 20px;
+        padding-top: 20px;
+        margin-left: 0px;
+        margin-top: 20px;
+    }
+    footer ul#social {
+        float: right;
+    }
+    footer ul#social li {
+        margin-left: 60px;
+    }
+    footer ul#social li:first-child {
+        margin-left: 0px;
     }
 }
