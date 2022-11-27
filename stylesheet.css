@@ -296,15 +296,20 @@ ul {
     }
 
     /* Details */
+    .details div {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
     dl {
         padding: 10px;
         margin: 0 auto;
-        display: grid;
-        grid-template-columns: 100px 1fr;
+        display: block;
     }
     dt {
         font-family: 'Montserrat', Arial, sans-serif;
         font-weight: bold;
+        text-align: right;
+        padding-right: 5px;
     }
     dd {
         text-align: left;
@@ -563,17 +568,16 @@ ul {
         display: grid;
         grid-template-columns: 1fr;
         flex-direction: column;
-        text-align: center;
-        width: 250px;
+        width: 500px;
     }
     dl div {
-        display: flex;
+        display: block;
     }
     dt {
-        display: flex;
-        text-align: left;
-        width: 100px;
+        display: block;
+        text-align: right;
         margin-right: 0px;
+        justify-content: flex-end;
     }
     dd {
         display: inline-block;
@@ -732,6 +736,10 @@ ul {
         margin-left: 0px;
         margin-right: 0px;
         width: 150px;
+    }
+    .details div {
+        display: flex;
+        flex-direction: column;
     }
     dl dt {
         display: flex;
