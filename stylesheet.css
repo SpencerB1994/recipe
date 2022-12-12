@@ -319,18 +319,20 @@ ul {
     }
 
     /* Search Bar and SVG */
-    section#search {
+    div#search {
         padding-left: 40px;
         padding-right: 40px;
         padding-top: 40px;
         padding-bottom: 20px;
     }
-    #search {
+    #searchBar {
         display: flex;
         order: -1;
         flex: 1;
+        padding: 40px 0px;
+        justify-content: center;
     }
-    #search svg {
+    #searchBar svg {
         background-color: #EB5428;
         padding: 0px 5px 1px 5px;
     }
@@ -536,7 +538,7 @@ ul {
     }
 
     /* Search Bar */
-    section#search {
+    section#searchBar {
         padding: 20px;
         order: -1;
         position: absolute;
@@ -546,12 +548,15 @@ ul {
         margin-left: 350px;
         height: 40px;
     }
-    #search {
+    #searchBar {
         display: flex;
         order: -1;
         flex: 1;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        justify-content: center;
     }
-    #search svg {
+    #searchBar svg {
         background-color: #EB5428;
         padding: 0px 5px 1px 5px;
     }
@@ -674,13 +679,14 @@ ul {
     }
 
     /* search bar */
-    section#search {
+    section#searchBar {
         display: flex;
         width: 300px;
         float: none;
         position: inherit;
         margin: auto;
         padding: 40px 0px;
+        justify-content: center;
     }
 
     /* h1 header */
