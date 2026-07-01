@@ -4,13 +4,14 @@
 
 ## Overview
 <p>This <i>Street Tacos Blog Recipe</i> is a fictional blog website.<br>
-This project demonstrates my understanding of HTML, CSS, and web design fundamentals by implementing responsive layouts and animated changes in color upon hover in the navigation bar.</p>
+This project demonstrates my understanding of HTML5, CSS3, responsive layouts, web design fundamentals, and interactive hover effects.</p>
 
 ## Features
 <ul>
-       <li>Responsive layout</li>
-       <li>Animated color changes in the navigation.</li>
-       <li>Stock imagery</li>
+       <li>Responsive page layout</li>
+       <li>Animated hover effects in the navigation menu.</li>
+       <li>Recipe content with structured sections.</li>
+       <li>Stock photography and iconography.</li>
 </ul>
 
 ## Technologies Used
@@ -29,4 +30,15 @@ This project demonstrates my understanding of HTML, CSS, and web design fundamen
 
 ## What I learned
 
-<p>This project strengthened my understanding of HTML, CSS, and the implementation of animated UI elements.</p>
+<p>This project strengthened my understanding of responsive layouts, HTML5 semantics, CSS styling, hover animations, and overall page organization.</p>
+
+## Future Improvments
+
+<p>Potential enhancements include:</p>
+<ul>
+       <li>Accessibility improvments.</li>
+       <li>Additional animations.</li>
+       <li>More responsive breakpoints.</li>
+       <li>JavaScript functionality.</li>
+       <li>Improved user interactions.</li>
+</ul>
